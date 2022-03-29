@@ -22,10 +22,10 @@ public class PlayerServiceImpl implements PlayerService {
     private final ModelMapper modelMapper;
 
     @Override
-    public HttpStatus savePlayer(PlayerDTO playerDTO) {
+    public PlayerDTO savePlayer(PlayerDTO playerDTO) {
         Player player = modelMapper.map(playerDTO, Player.class);
         Player savedPlayer = playerRepository.save(player);
-        return savedPlayer != null ? HttpStatus.OK : HttpStatus.BAD_REQUEST;
+        return modelMapper.map(savedPlayer, PlayerDTO.class);
     }
 
     @Override

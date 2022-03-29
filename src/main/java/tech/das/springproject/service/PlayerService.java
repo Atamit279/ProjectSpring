@@ -7,7 +7,7 @@ import tech.das.springproject.entities.Player;
 import java.util.List;
 
 public interface PlayerService {
-    HttpStatus savePlayer(PlayerDTO playerDTO);
+    PlayerDTO savePlayer(PlayerDTO playerDTO);
 
     List<PlayerDTO> getAll();
 

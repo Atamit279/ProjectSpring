@@ -15,7 +15,7 @@ public class PlayerController {
     private final PlayerService playerService;
 
     @PostMapping("/save")
-    public HttpStatus savePlayer(@RequestBody PlayerDTO playerDTO){
+    public PlayerDTO savePlayer(@RequestBody PlayerDTO playerDTO){
         return playerService.savePlayer(playerDTO);
     }
 
