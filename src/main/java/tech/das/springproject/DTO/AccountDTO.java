@@ -1,14 +1,16 @@
 package tech.das.springproject.DTO;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class EnchantDTO {
-    private Long id;
+@AllArgsConstructor
+@NoArgsConstructor
+public class AccountDTO {
+    private Integer id;
     private String login;
     private String password;
     private String conpassword;
     private String email;
-    private Number age;
-    private Long weaponId;
 }

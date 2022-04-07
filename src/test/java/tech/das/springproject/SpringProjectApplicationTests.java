@@ -65,7 +65,7 @@ class SpringProjectApplicationTests {
     }
 
     @Test
-    void saveValidUniversity(){
+    void saveValidPlayer(){
         PlayerDTO playerDTO = new PlayerDTO();
         playerDTO.setName("Atamit");
         playerDTO.setLvl(1L);
@@ -189,7 +189,7 @@ class SpringProjectApplicationTests {
     }
 
 
-    private static List<PlayerDTO> getValidUniversity(){
+    private static List<PlayerDTO> getValidPlayer(){
 
         PlayerDTO playerDTO = new PlayerDTO();
         playerDTO.setId(1L);

@@ -38,6 +38,10 @@ public class WeaponServiceImpl implements WeaponService {
 
     @Override
     public WeaponDTO getById(Long id) {
+        WeaponDTO weaponDTO = new WeaponDTO(1L, 1L, "dde", 1L, 1L);
+
+        weaponDTO.setDmg(18L);
+
         return weaponRepository.findById(id)
                 .map(weapon -> modelMapper.map(weapon, WeaponDTO.class))
                 .orElse(null);
