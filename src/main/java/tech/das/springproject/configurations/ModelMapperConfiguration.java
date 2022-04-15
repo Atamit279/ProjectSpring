@@ -10,6 +10,7 @@ public class ModelMapperConfiguration {
     public ModelMapper modelMapperConfig(){
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setAmbiguityIgnored(true);
+
         return modelMapper;
     }
 }

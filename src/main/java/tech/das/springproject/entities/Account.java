@@ -1,3 +1,10 @@
+/**
+ * Account
+ *
+ * Version 1.2
+ *
+ * Hanbecov Dmitrii / Daimanroyal@gmail.com
+ */
 package tech.das.springproject.entities;
 
 import lombok.AllArgsConstructor;
@@ -12,25 +19,21 @@ import javax.persistence.*;
 @Entity
 @Table(name = "account")
 public class Account {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Integer id;
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        @Column(name = "id")
-        private Integer id;
+    @Column(name = "login")
+    private String login;
 
-        @Column(name = "login")
-        private String login;
+    @Column(name = "password")
+    private  String password;
 
-        @Column(name = "password")
-        private  String password;
+    @Column(name = "conpassword")
+    private  String conpassword;
 
-        @Column(name = "conpassword")
-        private  String conpassword;
-
-        @Column(name = "email")
-        private String email;
-
-
-
+    @Column(name = "email")
+    private String email;
 
 }

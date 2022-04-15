@@ -25,6 +25,7 @@ public class PlayerServiceImpl implements PlayerService {
     public PlayerDTO savePlayer(PlayerDTO playerDTO) {
         Player player = modelMapper.map(playerDTO, Player.class);
         Player savedPlayer = playerRepository.save(player);
+
         return modelMapper.map(savedPlayer, PlayerDTO.class);
     }
 
@@ -51,7 +52,6 @@ public class PlayerServiceImpl implements PlayerService {
 
             newPlayer.setId(oldPlayer.getId());
             newPlayer.setLvl(oldPlayer.getLvl());
-
             playerRepository.save(newPlayer);
 
             return modelMapper.map(newPlayer, PlayerDTO.class);

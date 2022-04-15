@@ -69,6 +69,7 @@ public class WeaponServiceImpl implements WeaponService {
         Optional<Weapon> oldWeaponOpt = weaponRepository.findById(id);
         if (oldWeaponOpt.isPresent()) {
             weaponRepository.deleteById(id);
+
             return HttpStatus.OK;
         }
         return HttpStatus.BAD_REQUEST;

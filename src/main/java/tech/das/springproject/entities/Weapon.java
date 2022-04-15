@@ -27,4 +27,5 @@ public class Weapon {
 
     @OneToOne(mappedBy = "weapon", cascade = CascadeType.ALL)
     private Enchant enchant;
+
 }

@@ -15,8 +15,8 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {
-    private final ModelMapper modelMapper;
 
+    private final ModelMapper modelMapper;
     private final AccountRepository repository;
 
     @Override
@@ -25,6 +25,7 @@ public class AccountServiceImpl implements AccountService {
             throw new Exception("This login already exists");
         }
         Account savedAccount = repository.save(modelMapper.map(accountDTO, Account.class));
+
         return modelMapper.map(savedAccount, AccountDTO.class);
     }
 

@@ -52,7 +52,6 @@ public class EnchantServiceImpl implements EnchantService {
 
             newEnchant.setId(oldEnchant.getId());
             newEnchant.setWeapon(oldEnchant.getWeapon());
-
             enchantRepository.save(newEnchant);
 
             return modelMapper.map(newEnchant, EnchantDTO.class);
@@ -65,6 +64,7 @@ public class EnchantServiceImpl implements EnchantService {
         Optional<Enchant> oldEnchantOpt = enchantRepository.findById(id);
         if(oldEnchantOpt.isPresent()){
             enchantRepository.deleteById(id);
+
             return HttpStatus.OK;
         }
         return HttpStatus.BAD_REQUEST;
